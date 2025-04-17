@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Area Of Trapezod, PHP " />
+  <meta name="description" content="Random Number Guess, PHP" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Joyce Nkengbeza" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,7 @@
     sizes="16x16"
     href="./favicon-16x16new.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <title>Area Of Trapezoid In PHP</title>
+  <title>Random Number Guess, PHP</title>
 </head>
 
 <body>
@@ -38,24 +38,29 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Area Of Trapezoid, PHP</span>
+        <span class="mdl-layout-title">Random Number Guess, PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/trapezoid.svg" alt="Area of Trapezoid Image" />
+        <img src="./images/dice.gif" />
       </div>
       <div class="page-content-php">
-        <div id="area-trapezoid">
+        <div id="check">
           <?php
-          $abase = $_GET["a-base"];
-          $bbase = $_GET["b-base"];
-          $height = $_GET["height-length"];
+          const RANDOMNUMBER = "Math.floor(Math.random() * 6) + 1";
+          //input
+          $usernumber = $_GET["number"];
           // process
-          $area = (($abase + $bbase) / 2) * $height;
-
+          if ($usernumber === RANDOMNUMBER) {
+            //output 
+            echo "You have guessed the correct number!";
+          }
+          if ($usernumber !== RANDOMNUMBER) {
           // output 
-          echo "The area of the Trapezoid is:" . $area . "cm²";
+          echo "you have guessed the wrong number!" + 
+          "<br/>The Correct Number Was:" + RANDOMNUMBER;
+          }
           ?>
         </div>
         <div class="page-content-answer">

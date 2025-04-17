@@ -44,7 +44,7 @@
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/trapezoid.svg" alt="Area of Trapezoid Image" />
+        <img src="./images/dice.gif" />
       </div>
       <br />
       <div class="page-content-php">
