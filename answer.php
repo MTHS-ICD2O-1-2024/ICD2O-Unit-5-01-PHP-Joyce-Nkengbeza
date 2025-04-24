@@ -33,7 +33,7 @@
   <title>Random Number Guess, PHP</title>
 </head>
 
-<<body>
+<body>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
