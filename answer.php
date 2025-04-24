@@ -48,18 +48,19 @@
       <div class="page-content-php">
         <div id="check">
           <?php
-          const RANDOMNUMBER = "Math.floor(Math.random() * 6) + 1";
+          $randomnumber = rand(1, 6);
           //input
           $usernumber = $_GET["number"];
           // process
-          if ($usernumber === RANDOMNUMBER) {
+          if ($usernumber === $randomnumber) {
+            $randomnumber = rand(1, 6);
             //output 
-            echo "You have guessed the correct number!";
+            echo 'You have guessed the correct number!';
           }
-          if ($usernumber !== RANDOMNUMBER) {
+          if ($usernumber !== $randomnumber) {
           // output 
           echo "you have guessed the wrong number!" + 
-          "<br/>The Correct Number Was:" + RANDOMNUMBER;
+          "<br/>The Correct Number Was:". $randomnumber .
           }
           ?>
         </div>
